@@ -420,7 +420,264 @@
     </div>
     <script>
         // Idioma e textos
-        // ... (restante do JS igual ao anterior, sem alteração na lógica)
+        const langData = {
+            pt: {
+                title: "Momento Cultural Africano | Escola Profissional do Fundão",
+                headerTitle: "Momento Cultural Africano",
+                headerDesc: "Uma celebração da rica cultura africana",
+                headerDate: "13 de maio",
+                headerTime: "14:30 - 17:00",
+                headerPlace: "Refeitório da Escola Profissional do Fundão",
+                ctaText: "Participar",
+                aboutTitle: "Sobre o Evento",
+                aboutSubtitle: "Uma Viagem pela Cultura Africana",
+                aboutP1: 'O "Momento Cultural Africano" é um evento organizado pela aluna Odelice Barros, natural de São Tomé e Príncipe, que visa partilhar e celebrar a riqueza e diversidade da cultura africana com a comunidade escolar e público em geral.',
+                aboutP2: "Neste evento único, os participantes terão a oportunidade de experienciar autênticas danças africanas, admirar desfiles com trajes tradicionais e saborear deliciosos aperitivos típicos de várias regiões de África.",
+                aboutActivity1Title: "Danças Africanas",
+                aboutActivity1Desc: "Espetáculo de danças tradicionais de vários países africanos, com ritmos contagiantes e coreografias vibrantes.",
+                aboutActivity2Title: "Desfile de Trajes",
+                aboutActivity2Desc: "Apresentação de trajes tradicionais africanos, mostrando a diversidade e beleza das vestimentas do continente.",
+                aboutActivity3Title: "Aperitivos Típicos",
+                aboutActivity3Desc: "Degustação de iguarias africanas preparadas especialmente para o evento, proporcionando uma experiência gastronômica única.",
+                galleryTitle: "Galeria",
+                galleryDesc: "Explore momentos marcantes de edições anteriores e antecipe o que o espera neste evento cultural",
+                orgTitle: "A Organizadora",
+                orgName: "Odelice Barros",
+                orgRole: "Organizadora do Evento",
+                orgBio1: "Natural de São Tomé e Príncipe, Odelice Barros é aluna do 3º ano do curso de Comércio na Escola Profissional do Fundão. Desde pequena sonha em trabalhar na área de comércio e está disposta a aprender e enfrentar novos desafios.",
+                orgBio2: "Com este evento, Odelice pretende partilhar um pouco da sua cultura e tradições com a comunidade escolar, promovendo a diversidade cultural e o intercâmbio de experiências.",
+                orgTag1: "Aluna de Comércio",
+                orgTag2: "São Tomé e Príncipe",
+                orgTag3: "Cultura Africana",
+                contactTitle: "Contactos",
+                contactDesc: "Entre em contacto para mais informações sobre o evento ou para confirmar a sua presença",
+                contactInfoTitle: "Informações do Evento",
+                contactDateTitle: "Data",
+                contactDate: "13 de maio",
+                contactTimeTitle: "Horário",
+                contactTime: "14:30 - 17:00",
+                contactPlaceTitle: "Local",
+                contactPlace1: "Refeitório da Escola Profissional do Fundão",
+                contactPlace2: "Rua Cidade de Salamanca, nº1, 6234-370 Fundão",
+                contactOrgTitle: "Contactos da Organizadora",
+                contactPhoneTitle: "Telefone",
+                contactPhone: "937 270 351",
+                contactEmailTitle: "Email",
+                contactEmail: "odelicebarros@epfundao.edu.pt",
+                contactSchoolTitle: "Escola",
+                contactSchool: "Escola Profissional do Fundão",
+                footerTitle: "Momento Cultural Africano",
+                footerDesc: "Celebrando a diversidade cultural africana",
+                footerOrg: "Organizado por Odelice Barros",
+                footerCopy: "© 2025 Escola Profissional do Fundão. Todos os direitos reservados.",
+                gallery: [
+                    {
+                        img: "https://images.unsplash.com/photo-1630510590330-758f9428eb7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        caption: "Moda Africana - Jovens com roupas tradicionais africanas"
+                    },
+                    {
+                        img: "https://images.unsplash.com/photo-1617374995350-c26b53c74903?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0ZXNhbmF0b3MlMjBhZnJpY2Fub3N8ZW58MHx8MHx8fDA%3D",
+                        caption: "Artesanato Africano - Máscaras e esculturas típicas"
+                    },
+                    {
+                        img: "https://aleidguiaturisticostp.wordpress.com/wp-content/uploads/2019/02/20180117_172148.jpg",
+                        caption: "Frutos do Mar - Peixe e Choco em mercado africano"
+                    },
+                    {
+                        img: "https://png.pngtree.com/thumb_back/fh260/background/20230609/pngtree-the-african-women-women-are-dressed-in-colorful-african-dress-styles-image_2941970.jpg",
+                        caption: "Mulheres Africanas com vestidos coloridos"
+                    },
+                    {
+                        img: "https://images.unsplash.com/photo-1717185358516-3c34e86c19b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        caption: "Juventude Africana - Grupo dançando ao ar livre"
+                    },
+                    {
+                        img: "http://www.redeangola.info/wp-content/uploads/2014/09/Hard_Carla-Silva4_FB.jpg",
+                        caption: "Desfile Africano - Retrato artístico premium"
+                    }
+                ]
+            },
+            en: {
+                title: "African Cultural Moment | Fundão Professional School",
+                headerTitle: "African Cultural Moment",
+                headerDesc: "A celebration of rich African culture",
+                headerDate: "May 13",
+                headerTime: "2:30 PM - 5:00 PM",
+                headerPlace: "Cafeteria of Fundão Professional School",
+                ctaText: "Join Us",
+                aboutTitle: "About the Event",
+                aboutSubtitle: "A Journey through African Culture",
+                aboutP1: '"African Cultural Moment" is an event organized by student Odelice Barros, from São Tomé and Príncipe, aiming to share and celebrate the richness and diversity of African culture with the school community and the general public.',
+                aboutP2: "In this unique event, participants will experience authentic African dances, admire parades with traditional costumes, and taste delicious appetizers from various African regions.",
+                aboutActivity1Title: "African Dances",
+                aboutActivity1Desc: "Showcase of traditional dances from various African countries, with contagious rhythms and vibrant choreographies.",
+                aboutActivity2Title: "Costume Parade",
+                aboutActivity2Desc: "Presentation of traditional African costumes, showing the diversity and beauty of the continent's garments.",
+                aboutActivity3Title: "Typical Appetizers",
+                aboutActivity3Desc: "Tasting of African delicacies specially prepared for the event, providing a unique gastronomic experience.",
+                galleryTitle: "Gallery",
+                galleryDesc: "Explore highlights from previous editions and get a taste of what awaits you at this cultural event",
+                orgTitle: "The Organizer",
+                orgName: "Odelice Barros",
+                orgRole: "Event Organizer",
+                orgBio1: "Born in São Tomé and Príncipe, Odelice Barros is a 3rd-year student of Commerce at Fundão Professional School. Since childhood, she has dreamed of working in commerce and is willing to learn and face new challenges.",
+                orgBio2: "With this event, Odelice aims to share a bit of her culture and traditions with the school community, promoting cultural diversity and the exchange of experiences.",
+                orgTag1: "Commerce Student",
+                orgTag2: "São Tomé and Príncipe",
+                orgTag3: "African Culture",
+                contactTitle: "Contacts",
+                contactDesc: "Get in touch for more information about the event or to confirm your presence",
+                contactInfoTitle: "Event Information",
+                contactDateTitle: "Date",
+                contactDate: "May 13",
+                contactTimeTitle: "Time",
+                contactTime: "2:30 PM - 5:00 PM",
+                contactPlaceTitle: "Venue",
+                contactPlace1: "Cafeteria of Fundão Professional School",
+                contactPlace2: "Rua Cidade de Salamanca, nº1, 6234-370 Fundão",
+                contactOrgTitle: "Organizer's Contacts",
+                contactPhoneTitle: "Phone",
+                contactPhone: "937 270 351",
+                contactEmailTitle: "Email",
+                contactEmail: "odelicebarros@epfundao.edu.pt",
+                contactSchoolTitle: "School",
+                contactSchool: "Fundão Professional School",
+                footerTitle: "African Cultural Moment",
+                footerDesc: "Celebrating African cultural diversity",
+                footerOrg: "Organized by Odelice Barros",
+                footerCopy: "© 2025 Fundão Professional School. All rights reserved.",
+                gallery: [
+                    {
+                        img: "https://images.unsplash.com/photo-1630510590330-758f9428eb7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        caption: "African Fashion - Young people in traditional African clothing"
+                    },
+                    {
+                        img: "https://images.unsplash.com/photo-1617374995350-c26b53c74903?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXJ0ZXNhbmF0b3MlMjBhZnJpY2Fub3N8ZW58MHx8MHx8fDA%3D",
+                        caption: "African Handicraft - Typical masks and sculptures"
+                    },
+                    {
+                        img: "https://aleidguiaturisticostp.wordpress.com/wp-content/uploads/2019/02/20180117_172148.jpg",
+                        caption: "Seafood - Fish and cuttlefish at an African market"
+                    },
+                    {
+                        img: "https://png.pngtree.com/thumb_back/fh260/background/20230609/pngtree-the-african-women-women-are-dressed-colorful-african-dress-styles-image_2941970.jpg",
+                        caption: "African Women in colorful dresses"
+                    },
+                    {
+                        img: "https://images.unsplash.com/photo-1717185358516-3c34e86c19b3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        caption: "African Youth - Group dancing outdoors"
+                    },
+                    {
+                        img: "http://www.redeangola.info/wp-content/uploads/2014/09/Hard_Carla-Silva4_FB.jpg",
+                        caption: "African Parade - Artistic portrait"
+                    }
+                ]
+            }
+        };
+        let currentLang = 'pt';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            const d = langData[lang];
+            document.title = d.title;
+            document.getElementById('title').innerText = d.title;
+            document.getElementById('header-title').innerText = d.headerTitle;
+            document.getElementById('header-desc').innerText = d.headerDesc;
+            document.getElementById('header-date').innerText = d.headerDate;
+            if(document.getElementById('header-time')) document.getElementById('header-time').innerText = d.headerTime;
+            document.getElementById('header-place').innerText = d.headerPlace;
+            document.getElementById('cta-text').innerText = d.ctaText;
+            document.getElementById('about-title').innerText = d.aboutTitle;
+            document.getElementById('about-subtitle').innerText = d.aboutSubtitle;
+            document.getElementById('about-p1').innerText = d.aboutP1;
+            document.getElementById('about-p2').innerText = d.aboutP2;
+            document.getElementById('about-activity1-title').innerText = d.aboutActivity1Title;
+            document.getElementById('about-activity1-desc').innerText = d.aboutActivity1Desc;
+            document.getElementById('about-activity2-title').innerText = d.aboutActivity2Title;
+            document.getElementById('about-activity2-desc').innerText = d.aboutActivity2Desc;
+            document.getElementById('about-activity3-title').innerText = d.aboutActivity3Title;
+            document.getElementById('about-activity3-desc').innerText = d.aboutActivity3Desc;
+            document.getElementById('gallery-title').innerText = d.galleryTitle;
+            document.getElementById('gallery-desc').innerText = d.galleryDesc;
+            document.getElementById('org-title').innerText = d.orgTitle;
+            document.getElementById('org-name').innerText = d.orgName;
+            document.getElementById('org-role').innerText = d.orgRole;
+            document.getElementById('org-bio1').innerText = d.orgBio1;
+            document.getElementById('org-bio2').innerText = d.orgBio2;
+            document.getElementById('org-tag1').innerText = d.orgTag1;
+            document.getElementById('org-tag2').innerText = d.orgTag2;
+            document.getElementById('org-tag3').innerText = d.orgTag3;
+            document.getElementById('contact-title').innerText = d.contactTitle;
+            document.getElementById('contact-desc').innerText = d.contactDesc;
+            document.getElementById('contact-info-title').innerText = d.contactInfoTitle;
+            document.getElementById('contact-date-title').innerText = d.contactDateTitle;
+            document.getElementById('contact-date').innerText = d.contactDate;
+            document.getElementById('contact-time-title').innerText = d.contactTimeTitle;
+            document.getElementById('contact-time').innerText = d.contactTime;
+            document.getElementById('contact-place-title').innerText = d.contactPlaceTitle;
+            document.getElementById('contact-place1').innerText = d.contactPlace1;
+            document.getElementById('contact-place2').innerText = d.contactPlace2;
+            document.getElementById('contact-org-title').innerText = d.contactOrgTitle;
+            document.getElementById('contact-phone-title').innerText = d.contactPhoneTitle;
+            document.getElementById('contact-phone').innerText = d.contactPhone;
+            document.getElementById('contact-email-title').innerText = d.contactEmailTitle;
+            document.getElementById('contact-email').innerText = d.contactEmail;
+            document.getElementById('contact-school-title').innerText = d.contactSchoolTitle;
+            document.getElementById('contact-school').innerText = d.contactSchool;
+            document.getElementById('footer-title').innerText = d.footerTitle;
+            document.getElementById('footer-desc').innerText = d.footerDesc;
+            document.getElementById('footer-org').innerText = d.footerOrg;
+            document.getElementById('footer-copy').innerText = d.footerCopy;
+            renderGallery();
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+            langData[currentLang].gallery.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = "gallery-item rounded-lg overflow-hidden shadow-md cursor-pointer";
+                div.onclick = () => openModal(item.img, item.caption);
+                div.innerHTML = `
+                    <img src="${item.img}" alt="gallery-img-${idx}" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-bold text-black">${item.caption}</h4>
+                    </div>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        // Modal functions
+        function openModal(imgSrc, caption) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            modalCaption.innerText = caption;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+            });
+        });
+
+        // Inicialização
+        switchLang('pt');
     </script>
 </body>
 </html>
