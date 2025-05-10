@@ -10,18 +10,18 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         body { font-family: 'Poppins', sans-serif; background-color: #f8f8f8; }
         .african-pattern {
-    background-image: url('https://images.unsplash.com/photo-1530917203633-106d4a1a0967?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QWZyaWNhbm8lMjBjdWx0dXJhfGVufDB8fDB8fHww');
-    background-size: cover;           /* cobre toda a área */
-    background-position: center center;/* centraliza a imagem */
-    background-repeat: no-repeat;      /* não repete */
-    opacity: 0.2;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;              /* não interfere com cliques */
-}
+            background-image: url('https://images.unsplash.com/photo-1530917203633-106d4a1a0967?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QWZyaWNhbm8lMjBjdWx0dXJhfGVufDB8fDB8fHww');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0.2;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
         .gallery-item { transition: all 0.3s ease; }
         .gallery-item:hover { transform: scale(1.03); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);}
         .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9);}
@@ -29,7 +29,6 @@
         @keyframes zoom { from {transform: scale(0.1)} to {transform: scale(1)} }
         .close { position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s;}
         .close:hover { color: #bbb; cursor: pointer;}
-        /* Idioma button */
         .lang-switch { position: absolute; top: 24px; right: 32px; z-index: 20; }
         .lang-btn { background: #fff; color: #222; border-radius: 9999px; font-weight: bold; padding: 0.5rem 1.2rem; border: 2px solid #eab308; cursor: pointer; transition: background 0.2s;}
         .lang-btn.active, .lang-btn:hover { background: #eab308; color: #000;}
@@ -55,7 +54,11 @@
                     <div class="mb-8">
                         <div class="flex items-center mb-2">
                             <i class="fas fa-calendar-alt text-yellow-400 mr-3"></i>
-                            <span class="text-lg" id="header-date">2 de Maio de 2025</span>
+                            <span class="text-lg" id="header-date">13 de Maio de 2025</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-clock text-yellow-400 mr-3"></i>
+                            <span class="text-lg" id="header-time">14:30 - 17:00</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-map-marker-alt text-yellow-400 mr-3"></i>
@@ -143,7 +146,24 @@
                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto" id="gallery-desc">Explore momentos marcantes de edições anteriores e antecipe o que o espera neste evento cultural</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="gallery-grid">
-                <!-- Gallery items will be injected by JS -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1637097789487-14c58ce2e734?auto=format&fit=crop&w=600&q=80" alt="Cultura Africana 1" class="w-full h-56 object-cover" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1676304602090-162da794c0a1?auto=format&fit=crop&w=600&q=80" alt="Cultura Africana 2" class="w-full h-56 object-cover" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1676304601194-87d913dffd5b?auto=format&fit=crop&w=600&q=80" alt="Cultura Africana 3" class="w-full h-56 object-cover" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1635886630467-a1b8e34a10c1?auto=format&fit=crop&w=600&q=80" alt="Cultura Africana 4" class="w-full h-56 object-cover" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1737972373179-2077132017bf?auto=format&fit=crop&w=600&q=80" alt="Cultura Africana 5" class="w-full h-56 object-cover" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1656099796212-1e16324874af?auto=format&fit=crop&w=600&q=80" alt="Cultura Africana 6" class="w-full h-56 object-cover" onclick="openModal(this)">
+                </div>
             </div>
         </div>
     </section>
@@ -205,14 +225,14 @@
                             <i class="fas fa-calendar-alt text-yellow-500 mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-bold" id="contact-date-title">Data</h4>
-                                <p id="contact-date">2 de Maio de 2025</p>
+                                <p id="contact-date">13 de Maio de 2025</p>
                             </div>
                         </div>
                         <div class="flex items-start mb-4">
                             <i class="fas fa-clock text-yellow-500 mt-1 mr-3"></i>
                             <div>
                                 <h4 class="font-bold" id="contact-time-title">Horário</h4>
-                                <p id="contact-time">15:00 - 19:00</p>
+                                <p id="contact-time">14:30 - 17:00</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -293,7 +313,127 @@
         <div id="modalCaption" style="color:#fff;text-align:center;margin-top:16px;font-size:1.2rem;"></div>
     </div>
     <script>
-        // ... (JS code omitted for brevity, will be included in the actual file)
+        // Modal gallery logic
+        function openModal(img) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = img.src;
+            document.getElementById('modalCaption').innerText = img.alt;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        // Language switcher (PT/EN)
+        const langData = {
+            pt: {
+                'title': 'Momento Cultural Africano | Escola Profissional do Fundão',
+                'header-title': 'Momento Cultural Africano',
+                'header-desc': 'Uma celebração da rica cultura africana',
+                'header-date': '13 de Maio de 2025',
+                'header-time': '14:30 - 17:00',
+                'header-place': 'Refeitório da Escola Profissional do Fundão',
+                'cta-text': 'Participar',
+                'about-title': 'Sobre o Evento',
+                'about-subtitle': 'Uma Viagem pela Cultura Africana',
+                'about-p1': 'O "Momento Cultural Africano" é um evento organizado pela aluna Odelice Barros, natural de São Tomé e Príncipe, que visa partilhar e celebrar a riqueza e diversidade da cultura africana com a comunidade escolar e público em geral.',
+                'about-p2': 'Neste evento único, os participantes terão a oportunidade de experienciar autênticas danças africanas, admirar desfiles com trajes tradicionais e saborear deliciosos aperitivos típicos de várias regiões de África.',
+                'about-activity1-title': 'Danças Africanas',
+                'about-activity1-desc': 'Espetáculo de danças tradicionais de vários países africanos, com ritmos contagiantes e coreografias vibrantes.',
+                'about-activity2-title': 'Desfile de Trajes',
+                'about-activity2-desc': 'Apresentação de trajes tradicionais africanos, mostrando a diversidade e beleza das vestimentas do continente.',
+                'about-activity3-title': 'Aperitivos Típicos',
+                'about-activity3-desc': 'Degustação de iguarias africanas preparadas especialmente para o evento, proporcionando uma experiência gastronômica única.',
+                'gallery-title': 'Galeria',
+                'gallery-desc': 'Explore momentos marcantes de edições anteriores e antecipe o que o espera neste evento cultural',
+                'org-title': 'A Organizadora',
+                'org-name': 'Odelice Barros',
+                'org-role': 'Organizadora do Evento',
+                'org-bio1': 'Natural de São Tomé e Príncipe, Odelice Barros é aluna do 3º ano do curso de Comércio na Escola Profissional do Fundão. Desde pequena sonha em trabalhar na área de comércio e está disposta a aprender e enfrentar novos desafios.',
+                'org-bio2': 'Com este evento, Odelice pretende partilhar um pouco da sua cultura e tradições com a comunidade escolar, promovendo a diversidade cultural e o intercâmbio de experiências.',
+                'org-tag1': 'Aluna de Comércio',
+                'org-tag2': 'São Tomé e Príncipe',
+                'org-tag3': 'Cultura Africana',
+                'contact-title': 'Contactos',
+                'contact-desc': 'Entre em contacto para mais informações sobre o evento ou para confirmar a sua presença',
+                'contact-info-title': 'Informações do Evento',
+                'contact-date-title': 'Data',
+                'contact-date': '13 de Maio de 2025',
+                'contact-time-title': 'Horário',
+                'contact-time': '14:30 - 17:00',
+                'contact-place-title': 'Local',
+                'contact-place1': 'Refeitório da Escola Profissional do Fundão',
+                'contact-place2': 'Rua Cidade de Salamanca, nº1, 6234-370 Fundão',
+                'contact-org-title': 'Contactos da Organizadora',
+                'contact-phone-title': 'Telefone',
+                'contact-phone': '937 270 351',
+                'contact-email-title': 'Email',
+                'contact-email': 'odelicebarros@epfundao.edu.pt',
+                'contact-school-title': 'Escola',
+                'contact-school': 'Escola Profissional do Fundão',
+                'footer-title': 'Momento Cultural Africano',
+                'footer-desc': 'Celebrando a diversidade cultural africana',
+                'footer-org': 'Organizado por Odelice Barros',
+                'footer-copy': '© 2025 Escola Profissional do Fundão. Todos os direitos reservados.'
+            },
+            en: {
+                'title': 'African Cultural Moment | Fundão Vocational School',
+                'header-title': 'African Cultural Moment',
+                'header-desc': 'A celebration of Africa’s rich culture',
+                'header-date': 'May 13, 2025',
+                'header-time': '2:30 PM - 5:00 PM',
+                'header-place': 'Fundão Vocational School Cafeteria',
+                'cta-text': 'Join',
+                'about-title': 'About the Event',
+                'about-subtitle': 'A Journey through African Culture',
+                'about-p1': 'The "African Cultural Moment" is an event organized by student Odelice Barros, from São Tomé and Príncipe, aiming to share and celebrate the richness and diversity of African culture with the school community and the general public.',
+                'about-p2': 'In this unique event, participants will experience authentic African dances, admire parades with traditional costumes, and taste delicious appetizers from various regions of Africa.',
+                'about-activity1-title': 'African Dances',
+                'about-activity1-desc': 'Showcase of traditional dances from several African countries, with contagious rhythms and vibrant choreographies.',
+                'about-activity2-title': 'Costume Parade',
+                'about-activity2-desc': 'Presentation of traditional African costumes, showing the diversity and beauty of the continent’s garments.',
+                'about-activity3-title': 'Typical Appetizers',
+                'about-activity3-desc': 'Tasting of African delicacies prepared especially for the event, providing a unique gastronomic experience.',
+                'gallery-title': 'Gallery',
+                'gallery-desc': 'Explore highlights from previous editions and get a taste of what awaits you at this cultural event',
+                'org-title': 'The Organizer',
+                'org-name': 'Odelice Barros',
+                'org-role': 'Event Organizer',
+                'org-bio1': 'Born in São Tomé and Príncipe, Odelice Barros is a 3rd-year Commerce student at Fundão Vocational School. Since childhood, she has dreamed of working in commerce and is eager to learn and face new challenges.',
+                'org-bio2': 'With this event, Odelice aims to share a bit of her culture and traditions with the school community, promoting cultural diversity and the exchange of experiences.',
+                'org-tag1': 'Commerce Student',
+                'org-tag2': 'São Tomé and Príncipe',
+                'org-tag3': 'African Culture',
+                'contact-title': 'Contacts',
+                'contact-desc': 'Get in touch for more information about the event or to confirm your attendance',
+                'contact-info-title': 'Event Information',
+                'contact-date-title': 'Date',
+                'contact-date': 'May 13, 2025',
+                'contact-time-title': 'Time',
+                'contact-time': '2:30 PM - 5:00 PM',
+                'contact-place-title': 'Venue',
+                'contact-place1': 'Fundão Vocational School Cafeteria',
+                'contact-place2': 'Rua Cidade de Salamanca, nº1, 6234-370 Fundão',
+                'contact-org-title': 'Organizer Contacts',
+                'contact-phone-title': 'Phone',
+                'contact-phone': '937 270 351',
+                'contact-email-title': 'Email',
+                'contact-email': 'odelicebarros@epfundao.edu.pt',
+                'contact-school-title': 'School',
+                'contact-school': 'Fundão Vocational School',
+                'footer-title': 'African Cultural Moment',
+                'footer-desc': 'Celebrating African cultural diversity',
+                'footer-org': 'Organized by Odelice Barros',
+                'footer-copy': '© 2025 Fundão Vocational School. All rights reserved.'
+            }
+        };
+        function switchLang(lang) {
+            document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            for (const key in langData[lang]) {
+                const el = document.getElementById(key);
+                if (el) el.innerText = langData[lang][key];
+            }
+            document.title = langData[lang]['title'];
+        }
     </script>
 </body>
 </html>
